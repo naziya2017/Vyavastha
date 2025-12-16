@@ -8,7 +8,7 @@ import LoginPopup from "./components/LoginPopup/LoginPopup.jsx";
 import Footer from './components/Footer/Footer.jsx';
 import ServiceDetail from "./pages/ServiceDetail/ServiceDetail";
 import { CartProvider } from "./context/CartContext";
-import Payment  from "./Pages/Payment/Payment.jsx";
+import Payment  from "./pages/Payment/Payment.jsx";
 
 function App() {
   const [showLogin, setShowLogin] = useState(false);
