@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 // import { server } from './server';
@@ -28,7 +29,7 @@ function Payment() {
             setLoading(true);
 
             try {
-                const orderResponse = await fetch('http://localhost:8080/pay', {
+                const orderResponse = await fetch('https://vyavastha-backend.onrender.com/pay', {
                     method: "POST",
                     body: JSON.stringify({
                         amount,
@@ -53,7 +54,7 @@ function Payment() {
                         description: "Booking Payment",
                         order_id: order.order.id,
                         handler: async (response) => {
-                            const verifyResponse = await fetch('http://localhost:8080/verify-payment', {
+                            const verifyResponse = await fetch('https://vyavastha-backend.onrender.com/verify-payment', {
                                 method: 'POST',
                                 headers: {
                                     "Content-Type": "application/json",

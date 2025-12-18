@@ -3,7 +3,7 @@ import { createContext, useContext, useState, useEffect } from 'react';
 import axios from 'axios';
 
 const CartContext = createContext();
-const BASE_URL = 'http://localhost:8080';
+const BASE_URL = 'https://vyavastha-backend.onrender.com/';
 
 export const CartProvider = ({ children }) => {
   const [items, setItems] = useState([]);
